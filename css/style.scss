@@ -183,6 +183,15 @@ img {
 .hero__content {
   align-items: center;
 }
+.slide-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: opacity 250ms ease-in, transform 0.5s ease-in;
+}
+.slide-up.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
 // SERVICE SECTION
 .service {
   padding: 8rem 0;
@@ -295,6 +304,11 @@ img {
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   padding: 3.3rem 2.8rem;
+  transition: var(--transition);
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-color: transparent;
+  }
 }
 .testimonial__info {
   display: flex;
